@@ -1,0 +1,5 @@
+yapsy (1.9.2p3-1) unstable; urgency=low
+
+  * Initial release (Closes: #690069).
+
+ -- Agustin Henze <tin@sluc.org.ar>  Wed, 09 Oct 2012 12:36:41 -0300

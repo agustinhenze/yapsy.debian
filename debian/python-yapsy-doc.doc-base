@@ -1,0 +1,10 @@
+Document: python-yapsy-reference-manual
+Title: Python Yapsy Library Reference Manual
+Author: Thibauld Nion
+Abstract: Small library implementing the core mechanisms needed to build a
+ plugin system
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-yapsy-doc/html/index.html
+Files: /usr/share/doc/python-yapsy-doc/html/*

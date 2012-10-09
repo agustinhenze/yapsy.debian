@@ -1,0 +1,54 @@
+Source: yapsy
+Section: python
+Priority: optional
+Maintainer: Agustin Henze <tin@sluc.org.ar>
+Uploaders: Ulises Vitulli <dererk@debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: python-all,
+ python-support (>= 1),
+ python-sphinx,
+ python-setuptools,
+ python3-all,
+ python3-setuptools,
+ python-configparser,
+Standards-Version: 3.9.3
+X-Python-Version: >= 2.7
+Homepage: http://yapsy.sourceforge.net/
+
+Package: python-yapsy
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-configparser
+Suggests: python-yapsy-doc
+Description: simple plugin system for Python applications
+ Yapsy, or Yet Another Plugin SYstem, is a small library implementing the core
+ mechanisms needed to build a plugin system into a wider application.
+ .
+ The main purpose is to depend only on Python's standard libraries (at least
+ version 2.3) and to implement only the basic functionalities needed to detect,
+ load and keep track of several plugins.
+
+Package: python3-yapsy
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Suggests: python-yapsy-doc
+Description: simple plugin system for Python applications
+ Yapsy, or Yet Another Plugin SYstem, is a small library implementing the core
+ mechanisms needed to build a plugin system into a wider application.
+ .
+ The main purpose is to depend only on Python's standard libraries (at least
+ version 3.2) and to implement only the basic functionalities needed to detect,
+ load and keep track of several plugins.
+
+Package: python-yapsy-doc
+Architecture: all
+Depends: ${misc:Depends}, libjs-jquery, libjs-underscore
+Section: doc
+Description: simple plugin system for Python applications
+ Yapsy, or Yet Another Plugin SYstem, is a small library implementing the core
+ mechanisms needed to build a plugin system into a wider application.
+ .
+ The main purpose is to depend only on Python's standard libraries and to
+ implement only the basic functionalities needed to detect, load and keep track
+ of several plugins.
+ .
+ This package contains API documentation.
