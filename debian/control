@@ -11,9 +11,12 @@ Build-Depends-Indep: python-all,
  python3-all,
  python3-setuptools,
  python-configparser,
+ python-sphinx (>= 1.0.7+dfsg) | python3-sphinx,
 Standards-Version: 3.9.3
 X-Python-Version: >= 2.7
 Homepage: http://yapsy.sourceforge.net/
+Vcs-Git: git://git.debian.org/collab-maint/yapsy.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/yapsy.git
 
 Package: python-yapsy
 Architecture: all

@@ -1,4 +1,4 @@
-Files: artwork/*
+Files: src2/package/artwork/*, src2/package/artwork/*
 Copyright: (c) 2007, Thibauld Nion
 License: CC-SA-3.0
  This file is licensed under the Creative Commons Attribution ShareAlike 3.0

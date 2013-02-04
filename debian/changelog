@@ -1,3 +1,9 @@
+yapsy (1.10.1-1) unstable; urgency=low
+
+  * Imported Upstream version 1.10.1
+
+ -- Agustin Henze <tin@sluc.org.ar>  Mon, 04 Feb 2013 17:56:50 -0300
+
 yapsy (1.9.2p3-1) unstable; urgency=low
 
   * Initial release (Closes: #690069).
