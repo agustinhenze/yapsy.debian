@@ -4,6 +4,7 @@ yapsy (1.10.1-2) unstable; urgency=low
   * Removed libjs-jquery and libjs-underscore dependencies from
     python-yapsy-doc.
   * Added libjs-sphinxdoc dependency to python-yapsy-doc.
+  * Added gbp.conf file.
 
  -- Agustin Henze <tin@sluc.org.ar>  Tue, 05 Feb 2013 18:36:56 -0300
 
