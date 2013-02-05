@@ -12,7 +12,7 @@ Build-Depends-Indep: python-all,
  python3-setuptools,
  python-configparser,
  python-sphinx (>= 1.0.7+dfsg) | python3-sphinx,
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 X-Python-Version: >= 2.7
 Homepage: http://yapsy.sourceforge.net/
 Vcs-Git: git://git.debian.org/collab-maint/yapsy.git
@@ -44,9 +44,9 @@ Description: simple plugin system for Python applications
 
 Package: python-yapsy-doc
 Architecture: all
-Depends: ${misc:Depends}, libjs-jquery, libjs-underscore
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
 Section: doc
-Description: simple plugin system for Python applications
+Description: simple plugin system for Python applications - doc
  Yapsy, or Yet Another Plugin SYstem, is a small library implementing the core
  mechanisms needed to build a plugin system into a wider application.
  .
