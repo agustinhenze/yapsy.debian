@@ -43,7 +43,7 @@ class SimpleTestsCase(unittest.TestCase):
 			self.assertEqual(self.plugin_info.name,"Simple Plugin")
 			self.assertEqual(sole_category,self.plugin_info.category)
 		else:
-			self.assert_(True)
+			self.assertTrue(True)
 
 	def testLoaded(self):
 		"""
@@ -65,13 +65,13 @@ class SimpleTestsCase(unittest.TestCase):
 		Test if the activation procedure works.
 		"""
 		self.plugin_loading_check()
-		self.assert_(not self.plugin_info.plugin_object.is_activated)
+		self.assertTrue(not self.plugin_info.plugin_object.is_activated)
 		self.simplePluginManager.activatePluginByName(self.plugin_info.name,
 													  self.plugin_info.category)
-		self.assert_(self.plugin_info.plugin_object.is_activated)
+		self.assertTrue(self.plugin_info.plugin_object.is_activated)
 		self.simplePluginManager.deactivatePluginByName(self.plugin_info.name,
 														self.plugin_info.category)
-		self.assert_(not self.plugin_info.plugin_object.is_activated)
+		self.assertTrue(not self.plugin_info.plugin_object.is_activated)
 
 
 class SimplePluginAdvancedManipulationTestsCase(unittest.TestCase):
@@ -184,29 +184,28 @@ class SimplePluginAdvancedManipulationTestsCase(unittest.TestCase):
 		spm.collectPlugins()
 		# check that the getCategories works
 		self.assertEqual(len(spm.getCategories()),3)
-		first_category = spm.getCategories()[0]
-		self.assertEqual(first_category,"Default")
+		categories = spm.getCategories()
+		self.assertTrue("Default" in categories)
 		# check the getPluginsOfCategory
-		self.assertEqual(len(spm.getPluginsOfCategory(first_category)),1)
-		plugin_info = spm.getPluginsOfCategory(first_category)[0]
-		self.assertEqual(plugin_info.categories,["Default","IP"])
-		second_category = spm.getCategories()[1]
-		self.assertEqual(second_category,"IP")
+		self.assertEqual(len(spm.getPluginsOfCategory("Default")), 1)
+		plugin_info = spm.getPluginsOfCategory("Default")[0]
+		self.assertTrue("Default" in plugin_info.categories)
+		self.assertTrue("IP" in plugin_info.categories)
+		self.assertTrue("IP" in categories)
 		# check the getPluginsOfCategory
-		self.assertEqual(len(spm.getPluginsOfCategory(second_category)),1)
-		third_category = spm.getCategories()[2]
-		self.assertEqual(third_category,"Other")
+		self.assertEqual(len(spm.getPluginsOfCategory("IP")),1)
+		self.assertTrue("Other" in categories)
 		# check the getPluginsOfCategory
-		self.assertEqual(len(spm.getPluginsOfCategory(third_category)),0)
+		self.assertEqual(len(spm.getPluginsOfCategory("Other")),0)
 		# try to remove the plugin from one category and check the
 		# other category
-		spm.removePluginFromCategory(plugin_info,first_category)
-		self.assertEqual(len(spm.getPluginsOfCategory(first_category)),0)
-		self.assertEqual(len(spm.getPluginsOfCategory(second_category)),1)
+		spm.removePluginFromCategory(plugin_info, "Default")
+		self.assertEqual(len(spm.getPluginsOfCategory("Default")), 0)
+		self.assertEqual(len(spm.getPluginsOfCategory("IP")), 1)
 		# now re-add this plugin the to same category
-		spm.appendPluginToCategory(plugin_info,first_category)
-		self.assertEqual(len(spm.getPluginsOfCategory(first_category)),1)
-		self.assertEqual(len(spm.getPluginsOfCategory(second_category)),1)
+		spm.appendPluginToCategory(plugin_info, "Default")
+		self.assertEqual(len(spm.getPluginsOfCategory("Default")),1)
+		self.assertEqual(len(spm.getPluginsOfCategory("IP")),1)
 		
 class SimplePluginDetectionTestsCase(unittest.TestCase):
 	"""
