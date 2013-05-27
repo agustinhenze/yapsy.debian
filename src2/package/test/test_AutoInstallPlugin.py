@@ -3,6 +3,7 @@
 
 import test_settings
 import unittest
+import sys
 import os 
 import shutil
 
@@ -210,6 +211,9 @@ class AutoInstallZIPTestsCase(unittest.TestCase):
 		"""
 		Test if the correct plugin (define by a zip file) can be installed and loaded.
 		"""
+		if sys.version_info < (2, 6):
+			self.assertRaises(NotImplementedError,self.pluginManager.installFromZIP,os.path.join(self.new_plugins_waiting_dir,"autoinstallZIPplugin.zip"))
+			return
 		install_success = self.pluginManager.installFromZIP(os.path.join(self.new_plugins_waiting_dir,"autoinstallZIPplugin.zip"))
 		self.assert_(install_success)
 		self.pluginManager.collectPlugins()
@@ -219,15 +223,21 @@ class AutoInstallZIPTestsCase(unittest.TestCase):
 		"""
 		Test if, when the zip file does not contain what is required the installation fails.
 		"""
+		if sys.version_info < (2, 6):
+			self.assertRaises(NotImplementedError,self.pluginManager.installFromZIP,os.path.join(self.new_plugins_waiting_dir,"autoinstallWRONGzipplugin.zip"))
+			return
 		install_success = self.pluginManager.installFromZIP(os.path.join(self.new_plugins_waiting_dir,"autoinstallWRONGzipplugin.zip"))
 		self.assertFalse(install_success)
 		self.pluginManager.collectPlugins()
 		self.plugin_loading_check_none()
-				
+	
 	def testActivationAndDeactivation(self):
 		"""
 		Test if the activation procedure works.
 		"""
+		if sys.version_info < (2, 6):
+			self.assertRaises(NotImplementedError,self.pluginManager.installFromZIP,os.path.join(self.new_plugins_waiting_dir,"autoinstallZIPplugin.zip"))
+			return
 		install_success = self.pluginManager.installFromZIP(os.path.join(self.new_plugins_waiting_dir,"autoinstallZIPplugin.zip"))
 		self.assert_(install_success)
 		self.pluginManager.collectPlugins()

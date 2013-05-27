@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: Yapsy
-Version: 1.10.1-pythons2n3
+Version: 1.10.2-pythons2n3
 Summary: Yet another plugin system
 Home-page: http://yapsy.sourceforge.net
 Author: Thibauld Nion
@@ -22,7 +22,7 @@ Description: Yapsy is a small library implementing the core mechanisms needed to
         
         For more info see:
           - online at: http://packages.python.org/Yapsy/
-          - in the sources at: ./doc/index.rst
+          - in the sources at: ``package/doc/index.rst``
         
         Thibauld Nion
         
