@@ -24,6 +24,7 @@ override_dh_auto_clean:
 	dh_auto_clean -- --all
 	rm -rf src2/package/doc/_build
 	rm -rf build
+	rm -rf Yapsy.egg-info/
 
 override_dh_installchangelogs:
 	dh_installchangelogs --package python-yapsy src2/package/CHANGELOG.txt
