@@ -34,7 +34,7 @@ Package: python3-yapsy
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}
 Suggests: python-yapsy-doc
-Description: simple plugin system for Python applications
+Description: simple plugin system for Python3 applications
  Yapsy, or Yet Another Plugin SYstem, is a small library implementing the core
  mechanisms needed to build a plugin system into a wider application.
  .
