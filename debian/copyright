@@ -3,16 +3,6 @@ Upstream-Name: Yapsy
 Upstream-Contact: Thibauld Nion <tibonihoo@users.sourceforge.net>
 Source: http://sourceforge.net/projects/yapsy/files/
 
-Files: src2/package/artwork/* src2/package/artwork/*
-Copyright: (c) 2007-2013, Thibauld Nion
-License: CC-SA-3.0
- This file is licensed under the Creative Commons Attribution ShareAlike 3.0
- License. In short: you are free to share and make derivative works of the
- file under the conditions that you appropriately attribute it, and that you
- distribute it only under a license identical to this one.
- .
- http://creativecommons.org/licenses/by-sa/3.0/
-
 Files: *
 Copyright: (c) 2007-2013, Thibauld Nion
 License: BSD
@@ -36,6 +26,16 @@ License: BSD
  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: src2/package/artwork/*
+Copyright: (c) 2007-2013, Thibauld Nion
+License: CC-SA-3.0
+ This file is licensed under the Creative Commons Attribution ShareAlike 3.0
+ License. In short: you are free to share and make derivative works of the
+ file under the conditions that you appropriately attribute it, and that you
+ distribute it only under a license identical to this one.
+ .
+ http://creativecommons.org/licenses/by-sa/3.0/
 
 Files: debian/*
 Copyright: (C) 2012-2013 Agustin Henze <tin@sluc.org.ar>
