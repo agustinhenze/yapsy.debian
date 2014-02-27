@@ -23,4 +23,5 @@ override_dh_installdocs:
 	cd src2/package/doc; \
 	make html; \
 	cd -;
+	sed "s@http://sflogo.sourceforge.net/sflogo.php@@g" -i src2/package/doc/_build/html/index.html
 	dh_installdocs
