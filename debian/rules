@@ -4,46 +4,23 @@
 # Uncomment this to turn on verbose mode.
 # export DH_VERBOSE=1
 
-PYVERS :=  python2.7
-PY3VERS :=  $(shell py3versions -s)
+PACKAGE_NAME := $(shell dpkg-parsechangelog | sed -n -e's/^Source: \(.*\)\+/\1/p')
+export PYBUILD_NAME=$(PACKAGE_NAME)
 
 %:
-	dh $@ --with python2,python3 --with sphinxdoc
+	dh $@ --with python2,python3,sphinxdoc --buildsystem=pybuild
 
-override_dh_auto_build:
-
-override_dh_auto_test:
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-	set -ex; \
-		for py in $(PY3VERS) $(PYVERS); do \
-			$$py setup.py test; \
-		done
-endif
-
-override_dh_auto_clean:
-	dh_auto_clean -- --all
-	rm -rf src2/package/doc/_build
-	rm -rf build
-	rm -rf Yapsy.egg-info/
+override_dh_clean:
+	dh_clean
+	rm -rf src2/package/doc/_build/
 
 override_dh_installchangelogs:
 	dh_installchangelogs --package python-yapsy src2/package/CHANGELOG.txt
 	dh_installchangelogs --package python-yapsy-doc src2/package/CHANGELOG.txt
 	dh_installchangelogs --package python3-yapsy src3/package/CHANGELOG.txt
 
-override_dh_auto_install:
-	dh_auto_install
-	set -ex; \
-	for py in $(PYVERS); do \
-		$$py setup.py install --root debian/python-yapsy \
-				      --install-layout=deb; \
-	done
-	set -ex; \
-	for py in $(PY3VERS); do \
-		$$py setup.py install --root debian/python3-yapsy \
-				      --install-layout=deb; \
-	done
-	# Doc
+override_dh_installdocs:
 	cd src2/package/doc; \
 	make html; \
 	cd -;
+	dh_installdocs
