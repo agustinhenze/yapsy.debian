@@ -1,3 +1,12 @@
+yapsy (1.10.223-1) unstable; urgency=medium
+
+  * New upstream release version 1.10.223
+  * Bumped Standard-Version to 3.9.5 (no changes required)
+  * Use pybuild as buildsystem
+  * Goodbye SourceForge logo from doc
+
+ -- Agustin Henze <tin@debian.org>  Thu, 27 Feb 2014 19:06:51 -0300
+
 yapsy (1.10.2-1) unstable; urgency=low
 
   * Imported Upstream version 1.10.2
