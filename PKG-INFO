@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: Yapsy
-Version: 1.10.223
+Version: 1.10.323
 Summary: Yet another plugin system
 Home-page: http://yapsy.sourceforge.net
 Author: Thibauld Nion
@@ -20,13 +20,7 @@ Description: Yapsy is a small library implementing the core mechanisms needed to
         
         Please let me know if you find this useful.
         
-        For more info see:
-          - online at: http://packages.python.org/Yapsy/
-          - in the sources at: ``package/doc/index.rst``
-        
-        Thibauld Nion
-        
-        ---
+        For more info see online at: http://packages.python.org/Yapsy/ (in the sources at: ``package/doc/index.rst``).
         
         Site of the project: http://yapsy.sourceforge.net/
         
@@ -37,6 +31,8 @@ Description: Yapsy is a small library implementing the core mechanisms needed to
           - Mathieu Havel
           - Mathieu Clabaut
           - Mark Fickett
+          - agustinhenze
+          - qitta
         
         
 Keywords: plugin manager
