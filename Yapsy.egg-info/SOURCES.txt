@@ -38,6 +38,7 @@ src2/package/test/test_ConfigPlugin.py
 src2/package/test/test_ErrorInPlugin.py
 src2/package/test/test_FilterPlugin.py
 src2/package/test/test_PluginFileLocator.py
+src2/package/test/test_PluginInfo.py
 src2/package/test/test_SimplePlugin.py
 src2/package/test/test_Singleton.py
 src2/package/test/test_VersionedPlugin.py
@@ -110,6 +111,7 @@ src3/package/test/test_ConfigPlugin.py
 src3/package/test/test_ErrorInPlugin.py
 src3/package/test/test_FilterPlugin.py
 src3/package/test/test_PluginFileLocator.py
+src3/package/test/test_PluginInfo.py
 src3/package/test/test_SimplePlugin.py
 src3/package/test/test_Singleton.py
 src3/package/test/test_VersionedPlugin.py
