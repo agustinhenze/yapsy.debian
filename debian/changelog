@@ -1,3 +1,9 @@
+yapsy (1.10.423-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.10.423
+
+ -- Agustin Henze <tin@debian.org>  Fri, 13 Jun 2014 20:42:51 -0300
+
 yapsy (1.10.323-1) unstable; urgency=medium
 
   * New upstream release version 1.10.323
