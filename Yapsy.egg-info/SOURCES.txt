@@ -61,6 +61,8 @@ src2/package/test/plugins/versioned11.version-plugin
 src2/package/test/plugins/versioned111.version-plugin
 src2/package/test/plugins/versioned12.version-plugin
 src2/package/test/plugins/versioned12a1.version-plugin
+src2/package/test/pluginsasdirs/simpleplugin.yapsy-plugin
+src2/package/test/pluginsasdirs/SimplePlugin/__init__.py
 src2/package/test/pluginstoinstall/AutoInstallPlugin.py
 src2/package/test/pluginstoinstall/autoinstallWRONGzipplugin.zip
 src2/package/test/pluginstoinstall/autoinstallZIPplugin.zip
@@ -134,6 +136,8 @@ src3/package/test/plugins/versioned11.version-plugin
 src3/package/test/plugins/versioned111.version-plugin
 src3/package/test/plugins/versioned12.version-plugin
 src3/package/test/plugins/versioned12a1.version-plugin
+src3/package/test/pluginsasdirs/simpleplugin.yapsy-plugin
+src3/package/test/pluginsasdirs/SimplePlugin/__init__.py
 src3/package/test/pluginstoinstall/AutoInstallPlugin.py
 src3/package/test/pluginstoinstall/autoinstallWRONGzipplugin.zip
 src3/package/test/pluginstoinstall/autoinstallZIPplugin.zip
