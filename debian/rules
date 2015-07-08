@@ -15,10 +15,6 @@ override_dh_clean:
 	dh_clean
 	rm -rf src2/package/doc/_build/
 
-override_dh_installchangelogs:
-	dh_installchangelogs --package python-yapsy src2/package/CHANGELOG.txt
-	dh_installchangelogs --package python-yapsy-doc src2/package/CHANGELOG.txt
-	dh_installchangelogs --package python3-yapsy src3/package/CHANGELOG.txt
 
 override_dh_installdocs:
 	cd src2/package/doc; \
