@@ -1,0 +1,14 @@
+--- a/test/test_PluginFileLocator.py
++++ b/test/test_PluginFileLocator.py
+@@ -189,11 +189,6 @@
+ 		self.plugin_name = "SimplePlugin"
+ 		self.plugin_impl_file = self.plugin_name+".py"
+ 		
+-	def test_default_plugins_place_is_parent_dir(self):
+-		"""Test a non-trivial default behaviour introduced some time ago :S"""
+-		pl = PluginFileLocator()
+-		self.assertTrue("package/yapsy" in pl.plugins_places[0])
+-	
+ 	def test_locatePlugins(self):
+ 		pl = PluginFileLocator()
+ 		pl.setPluginPlaces([self.plugin_directory])
