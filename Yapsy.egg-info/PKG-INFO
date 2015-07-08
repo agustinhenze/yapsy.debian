@@ -1,10 +1,10 @@
 Metadata-Version: 1.1
 Name: Yapsy
-Version: 1.10.423
+Version: 1.11.223
 Summary: Yet another plugin system
 Home-page: http://yapsy.sourceforge.net
 Author: Thibauld Nion
-Author-email: tibonihoo@users.sourceforge.net
+Author-email: thibauld@tibonihoo.net
 License: BSD
 Description: Yapsy is a small library implementing the core mechanisms needed to
         build a plugin system into a wider application.
@@ -15,12 +15,13 @@ Description: Yapsy is a small library implementing the core mechanisms needed to
         
         To use yapsy, make sure that the "yapsy" directory is in your Python
         loading path and just import the needed class from yapsy (e.g. "from
-        yapsy.PluginManager import PluginManager"). To see more examples, you
-        may want to have a look at the unit tests inside the "test" directory.
+        yapsy.PluginManager import PluginManager"). 
+        
+        To see more examples, you can have a look at the unit tests inside the
+        "test" directory or at the "Showcase and tutorials" section of the
+        documentation (http://yapsy.sourceforge.net/#showcase-and-tutorials).
         
         Please let me know if you find this useful.
-        
-        For more info see online at: http://packages.python.org/Yapsy/ (in the sources at: ``package/doc/index.rst``).
         
         Site of the project: http://yapsy.sourceforge.net/
         
@@ -31,9 +32,17 @@ Description: Yapsy is a small library implementing the core mechanisms needed to
           - Mathieu Havel
           - Mathieu Clabaut
           - Mark Fickett
-          - agustinhenze
+          - Agustin Henze
           - qitta
           - Roberto Alsina
+          - Josip Delic (delijati)
+          - frmdstryr
+          - Pierre-Yves Langlois
+        
+        
+        Contributions are welcome as pull requests, patches or tickets on the
+        forge (https://sourceforge.net/projects/yapsy/) or on github
+        (https://github.com/tibonihoo/yapsy).
         
 Keywords: plugin manager
 Platform: All
@@ -42,6 +51,6 @@ Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: BSD License
 Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python
-Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
