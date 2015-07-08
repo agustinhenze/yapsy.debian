@@ -13,14 +13,13 @@ export PYBUILD_NAME=$(PACKAGE_NAME)
 
 override_dh_clean:
 	dh_clean
-	rm -rf src2/package/doc/_build/
-
+	rm -rf doc/_build/
 
 override_dh_installdocs:
-	cd src2/package/doc; \
+	cd doc; \
 	make html; \
 	cd -;
-	sed "s@http://sflogo.sourceforge.net/sflogo.php@@g" -i src2/package/doc/_build/html/index.html
+	sed "s@http://sflogo.sourceforge.net/sflogo.php@@g" -i doc/_build/html/index.html
 	dh_installdocs
 
 get-orig-source:
