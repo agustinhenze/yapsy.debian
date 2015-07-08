@@ -1,3 +1,17 @@
+yapsy (1.11.223-1) unstable; urgency=medium
+
+  * Add get-orig-source target
+  * Imported Upstream version 1.11.223 (Closes: #790711)
+  * Update doc config and debian/rules to the new upstream version
+  * Remove override_dh_installchangelogs (fixed in upstream)
+  * Add patch that removes a failed test case, reported to upstream see:
+    http://sourceforge.net/p/yapsy/bugs/32/
+  * Remove dependency on python-support (Closes: #786246)
+  * Bumped Standard-Version to 3.9.6 (no changes required)
+  * Fix debian/watch, now it uses the pypi.debian.net redirector
+
+ -- Agustin Henze <tin@debian.org>  Wed, 08 Jul 2015 08:30:16 -0300
+
 yapsy (1.10.423-1) unstable; urgency=medium
 
   * Imported Upstream version 1.10.423
