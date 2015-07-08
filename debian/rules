@@ -5,6 +5,7 @@
 # export DH_VERBOSE=1
 
 PACKAGE_NAME := $(shell dpkg-parsechangelog | sed -n -e's/^Source: \(.*\)\+/\1/p')
+UVERSION := $(shell dpkg-parsechangelog | sed -n -e's/^Version: \(.*\)-[^-]\+/\1/p' | cut -d ":" -f 2)
 export PYBUILD_NAME=$(PACKAGE_NAME)
 
 %:
@@ -25,3 +26,11 @@ override_dh_installdocs:
 	cd -;
 	sed "s@http://sflogo.sourceforge.net/sflogo.php@@g" -i src2/package/doc/_build/html/index.html
 	dh_installdocs
+
+get-orig-source:
+	@if [ ! -d "debian" ] ; then \
+		echo 'Run this from the top directory of the Debian source' >&2; \
+		exit 1; \
+	fi
+	wget https://pypi.python.org/packages/source/Y/Yapsy/Yapsy-$(UVERSION).tar.gz \
+		-O ../$(PACKAGE_NAME)_$(UVERSION).orig.tar.gz
