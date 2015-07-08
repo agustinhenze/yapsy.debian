@@ -5,7 +5,6 @@ Maintainer: Agustin Henze <tin@debian.org>
 Uploaders: Ulises Vitulli <dererk@debian.org>
 Build-Depends: debhelper (>= 9)
 Build-Depends-Indep: python-all,
- python-support (>= 1),
  python-sphinx,
  python-setuptools,
  python3-all,
