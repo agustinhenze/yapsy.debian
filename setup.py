@@ -29,46 +29,41 @@ Automagical stuff:
       python setup.py build_sphinx
 """
 
+import os
 from setuptools import setup
 
-
-import sys
-
-# Trick from http://python3porting.com/2to3.html#distribution-section
-if sys.version < '3':
-  package_par_dir = 'src2/package'
-else:
-  package_par_dir = 'src3/package'
-
-sys.path.insert(0,package_par_dir)
-import yapsy
-
-setup(
-    name = "Yapsy",
-	version = yapsy.__version__,
-	packages = ['yapsy'],
-	package_dir = {'yapsy':package_par_dir+"/yapsy"},
+# just in case setup.py is launched from elsewhere that the containing directory
+originalDir = os.getcwd()
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+try:
+	setup(
+		name = "Yapsy",
+		version = __import__("yapsy").__version__,
+		packages = ['yapsy'],
+		package_dir = {'yapsy':'yapsy'},
+		
+		# the unit tests
+		test_suite = "test.test_All.MainTestSuite",
+		
+		# metadata for upload to PyPI
+		author = "Thibauld Nion",
+		author_email = "thibauld@tibonihoo.net",
+		description = "Yet another plugin system",
+		license = "BSD",
+		keywords = "plugin manager",
+		url = "http://yapsy.sourceforge.net",
+		# more details
+		long_description = open("README.txt").read(),
+		classifiers=['Development Status :: 5 - Production/Stable',
+					 'Intended Audience :: Developers',
+					 'License :: OSI Approved :: BSD License',
+					 'Operating System :: OS Independent',
+					 'Programming Language :: Python',
+					 'Programming Language :: Python :: 2',
+					 'Programming Language :: Python :: 3',
+					 'Topic :: Software Development :: Libraries :: Python Modules'],
+		platforms='All',
+		)
 	
-	# the unit tests
-	test_suite = "test_switch.MainTestSuite",
-	
-	# metadata for upload to PyPI
-	author = "Thibauld Nion",
-	author_email = "tibonihoo@users.sourceforge.net",
-	description = "Yet another plugin system",
-	license = "BSD",
-	keywords = "plugin manager",
-	url = "http://yapsy.sourceforge.net",
-	# more details
-	long_description = open(package_par_dir+"/README.txt").read(),
-	classifiers=['Development Status :: 5 - Production/Stable',
-				 'Intended Audience :: Developers',
-				 'License :: OSI Approved :: BSD License',
-				 'Operating System :: OS Independent',
-				 'Programming Language :: Python',
-				 'Programming Language :: Python :: 3',
-				 'Programming Language :: Python :: 2',
-				 'Topic :: Software Development :: Libraries :: Python Modules'],
-	platforms='All',
-	)
-
+finally:
+  os.chdir(originalDir)
